@@ -7,7 +7,7 @@ int main()
     int num;
     int sof;
 
-    num = 284;
+    scanf("%d", &num);
     sof = sum_of_factors(num);
     printf("%d", sof);
     return EXIT_SUCCESS;
