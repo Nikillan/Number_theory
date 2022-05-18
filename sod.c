@@ -9,22 +9,22 @@ int main()
     int sod;
     int safe;
 
-    num = 12345;
-    safe = num;
+    scanf("%d", &num);
 
-    sod = sum_of_digits(safe);
+    sod = sum_of_digits(num);
     printf("%d", sod);
     return EXIT_SUCCESS;
 }
 
-int sum_of_digits(int safe)
+int sum_of_digits(int num)
 {
 
     int sod = 0;
-    while(safe)
+    int place = 1;
+    while(place < num)
     {
-        sod = sod + safe % 10;
-        safe /= 10;
+        sod += (num %(10 * place))/place;
+        place *= 10;
     }
     return sod;
 }
